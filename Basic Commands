@@ -1,6 +1,10 @@
 #About Volumes:
  lsblk
  df -h
+ 
+#RAM Availablity and Processes
+ htop
+ top
 
 #Find Linux version:
  cd /etc/*-release
@@ -23,3 +27,38 @@
   ctrl+z - Sleep ssignal (later can be resumed */
   
   
+  
+#add user
+ adduser gokul
+
+#add password
+ passwd
+
+#delete user
+ deluser gokul
+  
+#List all users
+ cat /etc/passwd
+ 
+ 
+ #Find the file system
+  df -T /mnt/d 
+  
+  
+  # to show recent files at last
+  ls -lrt
+
+
+#listing all opened ports
+ sudo lsof -i -P -n
+
+
+#change password rules and length
+ sudo nano /etc/pam.d/common-password
+   password     [success=1 default=ignore]    pam_unix.so obscure sha512 minlen=2
+
+#uninstal application:
+ sudo apt-get remove --purge {package-name}
+ sudo apt-get autoremove
+ sudo apt-get autoclean
+ sudo apt-get clean
