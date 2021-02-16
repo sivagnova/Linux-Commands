@@ -1,0 +1,12 @@
+# Ubuntu 18.04 change Hostname for home user
+sudo usermod -d /home/siva -m siva
+
+sudo vi /etc/sudoers
+
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+
+nova    ALL=(ALL) ALL
+
+#This is for system command 
+sudo usermod -d /home/newHomeDir -m newUsername
