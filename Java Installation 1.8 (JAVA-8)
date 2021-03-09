@@ -1,0 +1,37 @@
+#Install java 1.8 (JAVA8)
+
+sudo apt install default-jre
+
+sudo apt-get install openjdk-8-jre
+
+sudo apt install default-jdk
+
+ sudo apt-get install openjdk-8-jdk
+ 
+ javac -version
+javac 11.0.10
+root@ip-10-1-0-75:/home/ubuntu# sudo update-alternatives --config java
+There are 2 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                            Priority   Status
+------------------------------------------------------------
+* 0            /usr/lib/jvm/java-11-openjdk-amd64/bin/java      1111      auto mode
+  1            /usr/lib/jvm/java-11-openjdk-amd64/bin/java      1111      manual mode
+  2            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java   1081      manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 2
+
+#select 2 java 8
+
+sudo vi /etc/environment
+
+source /etc/environment
+
+echo $JAVA_HOME
+/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+
+#set environment path jav-8
+
+sudo vi /etc/environment
+JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"  (this is correct path for java-11- /java-8)
+
