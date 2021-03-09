@@ -1,0 +1,37 @@
+Download the below link
+
+Core: 
+
+option 2
+
+tar.gz (pgp, sha512) 
+
+wget https://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.63/bin/apache-tomcat-8.5.63.tar.gz
+
+(or)
+
+https://tomcat.apache.org/download-80.cgi
+
+tar xvf apache-tomcat-8.5.63.tar.gz
+#Check you home in server.
+
+/home/ubuntu# ls
+apache-tomcat-8.5.63  apache-tomcat-8.5.63.tar.gz
+
+#move tomcat untar folder for opt path
+mv apache-tomcat-8.5.63 /opt/
+
+#Symbolic link with tomcat 
+
+/opt# ln -s apache-tomcat-8.5.63 tomcat
+
+Check with tomcat folder
+
+/opt# ls
+apache-tomcat-8.5.63  tomcat
+
+#Give a file permission for ubuntu or suselinux
+
+chown -R ubuntu:ubuntu /home/ubuntu/deployement(filename)/     (Ubuntu)
+
+chown -R ec2-user:users /home/ec2-user/sago(filename)/            SuseLinux
