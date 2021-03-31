@@ -41,3 +41,7 @@ pm2 start app.js
 pm2 startup systemd
   
 pm2 save
+
+finall check the status of pm2 status
+
+localhost@portno
