@@ -9,6 +9,12 @@ psql
 create user sago 
 CREATE DATABASE testdb;
 ALTER DATABASE testdb OWNER TO sago;
+
+# psql change path
+vi /etc/postgresql/10/main/pg_hba.conf
+
+vi /etc/postgresql/10/main/postgresql.conf
+
 //edit in the pg_hba.conf file
      local all all 		trust
      host all all     127.0.0.1/32 trust
@@ -16,3 +22,11 @@ ALTER DATABASE testdb OWNER TO sago;
 //if you want to use password replace trust /peer with md5
 //now from ec2-user 
 psql -U sago testdb
+
+# Once loged in psql
+psql -U postgres
+create user sivag;
+create database testdb;
+postgres=# alter database testdb owner to sivag;
+
+
