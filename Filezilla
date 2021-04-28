@@ -1,0 +1,3 @@
+# ubuntu 18.04 FileZilla
+
+sudo apt-get install filezilla -y
