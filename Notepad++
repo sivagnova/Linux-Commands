@@ -1,0 +1,9 @@
+#ubuntu 18.04 install notepad ++
+
+sudo snap install notepad-plus-plus
+
+sudo snap refresh notepad-plus-plus
+
+#If you want to uninstall notepad-plus-plus, Execute:
+
+sudo snap remove notepad-plus-plus
