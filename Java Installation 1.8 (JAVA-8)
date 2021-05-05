@@ -28,10 +28,36 @@ sudo vi /etc/environment
 source /etc/environment
 
 echo $JAVA_HOME
+
+# just ref not needed
 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
 #set environment path jav-8
 
 sudo vi /etc/environment
-JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"  (this is correct path for java-11- /java-8)
 
+JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"  (this is correct path for java-11- /java-8)
+
+#this is correct  JAVA-8
+
+JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+
+#uninstall java 8/11
+
+sudo rm -r /usr/lib/jvm/java-11-
+sudo rm -r /usr/lib/jvm/java-11-openjdk-amd64/
+sudo rm -r /usr/lib/jvm/java-1.11.0-openjdk-amd64
+# again run this command set enrvironment home
+
+sudo update-alternatives --config java
+
+There is 1 choice for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                            Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java   1081      auto mode
+* 1            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java   1081      manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 1
+
+done..working
